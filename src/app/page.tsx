@@ -1,6 +1,3 @@
-import Image from "next/image";
-// import { motion } from "motion/react";
-import * as motion from "motion/react-client";
 import Socials from "@/components/socials";
 import Navbar from "@/components/navbar";
 import Projects from "@/components/projects";
