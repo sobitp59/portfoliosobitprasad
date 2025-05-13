@@ -1,101 +1,79 @@
 import Image from "next/image";
+// import { motion } from "motion/react";
+import * as motion from "motion/react-client";
+import Socials from "@/components/socials";
+import Navbar from "@/components/navbar";
+import Projects from "@/components/projects";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        {/* header */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
+          <div className="flex flex-col gap-2">
+            <section className="font-[family-name:var(--font-fraunces)] text-3xl font-bold flex items-center gap-2 justify-start">
+              <div className="group flex justify-start items-center gap-3 z-0 mt-8 text-base focus:outline-none">
+                <div className="relative -z-10  w-full bg-tertiary bg-cover bg-center">
+                  <img
+                    src={"/profile.jpeg"}
+                    alt={
+                      "Sobit Prasad profile image looking straight and smiling"
+                    }
+                    width={70}
+                    height={70}
+                    className="z-0 object-cover rounded-lg rotate-6 border-2 hover:cursor-pointer "
+                    loading="lazy"
+                  />
+                  <img
+                    src={"/profile.jpeg"}
+                    alt={
+                      "Sobit Prasad profile image looking straight and smiling"
+                    }
+                    width={70}
+                    height={70}
+                    className="absolute left-0 top-0 -z-10 object-cover opacity-0 blur-3xl saturate-200 duration-300 sm:group-hover:opacity-75 sm:group-focus:opacity-75 rounded-lg rotate-6 border-2"
+                    loading="lazy"
+                  />
+                </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+                <h2 className="text-3xl">Sobit</h2>
+                <h2 className="text-3xl">Prasad</h2>
+              </div>
+            </section>
+
+            <Socials />
+            <Navbar />
+          </div>
+
+          <p className="text-base font-normal leading-6">
+            Sobit Prasad is a software engineer and a tech enthusiast. He loves
+            to write about software development, technology, and life. He is
+            passionate about building products that make a difference. He was
+            previously working as a Frontend Engineer at{" "}
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/company/startuphire/posts/?feedView=all"
+              className="font-[family-name:var(--font-fraunces)] font-base hover:underline"
+            >
+              StartupHire
+            </Link>
+            . He is currently working as a Full Stack Engineer at{" "}
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/school/woxsen-university/posts/?feedView=all"
+              className="font-[family-name:var(--font-fraunces)] font-base hover:underline"
+            >
+              Woxsen University
+            </Link>
+            .
+          </p>
         </div>
+
+        {/* projects */}
+        <Projects />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
