@@ -2,6 +2,7 @@ import Socials from "@/components/socials";
 import Navbar from "@/components/navbar";
 import Projects from "@/components/projects";
 import Link from "next/link";
+import BlurImage from "@/components/blur-image";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
             <section className="font-[family-name:var(--font-fraunces)] text-3xl font-bold flex items-center gap-2 justify-start">
               <div className="group flex justify-start items-center gap-3 z-0 mt-8 text-base focus:outline-none">
                 <div className="relative -z-10  w-full bg-tertiary bg-cover bg-center">
-                  <img
+                  {/* <img
                     src={"/profile.jpeg"}
                     alt={
                       "Sobit Prasad profile image looking straight and smiling"
@@ -22,16 +23,16 @@ export default function Home() {
                     height={70}
                     className="z-0 object-cover rounded-lg rotate-6 border-2 hover:cursor-pointer "
                     loading="lazy"
-                  />
-                  <img
-                    src={"/profile.jpeg"}
+                  /> */}
+                  <BlurImage
+                    src={"/profile2.jpeg"}
                     alt={
                       "Sobit Prasad profile image looking straight and smiling"
                     }
-                    width={70}
-                    height={70}
-                    className="absolute left-0 top-0 -z-10 object-cover opacity-0 blur-3xl saturate-200 duration-300 sm:group-hover:opacity-75 sm:group-focus:opacity-75 rounded-lg rotate-6 border-2"
-                    loading="lazy"
+                    width={150}
+                    height={150}
+                    className="z-0 object-cover rounded-lg rotate-6 border-2 hover:cursor-pointer "
+                    blurDataURL={"/profile2.jpeg"}
                   />
                 </div>
 

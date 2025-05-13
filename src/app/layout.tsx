@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// const fraunces = Fraunces({
+//   variable: "--font-fraunces",
+//   subsets: ["latin"],
+// });
+
+const geist = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 
@@ -23,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fraunces.variable} antialiased`}>
+      <body className={`${geist.variable} antialiased`}>
         {/* <LoadingScreen /> */}
         {children}
         <Footer />
