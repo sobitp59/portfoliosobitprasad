@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
+import { WebVitals } from "@/components/web-vitals";
+import { Analytics } from "@vercel/analytics/next"
 
 
 const geist = Geist({
@@ -44,8 +46,11 @@ export default function RootLayout({
        {/* <head/> */}
       <body className={`${geist.variable} antialiased`}>
         <main className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
+          <WebVitals />
          {children}
         </main>
+
+        <Analytics/>
 
         <Footer/>
       </body>

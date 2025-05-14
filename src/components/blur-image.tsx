@@ -28,7 +28,7 @@ export default function BlurImage({src, alt, width, height, blurDataURL, classNa
         className={`object-cover transition-all duration-700 ease-in-out ${
           isLoading ? 'blur-xl scale-105' : 'blur-none scale-100'
         }`}
-        onLoadingComplete={() => setIsLoading(false)}
+        onLoad={() => setIsLoading(false)}
       />
     </div>
   
