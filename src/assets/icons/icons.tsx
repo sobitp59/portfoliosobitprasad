@@ -5,8 +5,8 @@ const GithubIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width={24}
-      height={24}
+      width={18}
+      height={18}
       color={"#fff"}
       fill={"none"}
     >
@@ -33,8 +33,8 @@ const LinkedinIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width={24}
-      height={24}
+      width={18}
+      height={18}
       color={"#fff"}
       fill={"none"}
     >
@@ -74,8 +74,8 @@ const MailIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width={24}
-      height={24}
+      width={18}
+      height={18}
       color={"#fff"}
       fill={"none"}
     >
@@ -100,8 +100,8 @@ const TwitterIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width={24}
-      height={24}
+      width={18}
+      height={18}
       color={"#fff"}
       fill={"none"}
     >
@@ -143,6 +143,27 @@ const LeftArrowIcon = () => {
   );
 };
 
+const DownloadLoadIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={16}
+      height={16}
+      color={"#fff"}
+      fill={"none"}
+    >
+      <path
+        d="M12 3V15M12 15L8.5 11.5M12 15L15.5 11.5M21 18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7V18Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default LeftArrowIcon;
 
-export { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon };
+export { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon, DownloadLoadIcon };

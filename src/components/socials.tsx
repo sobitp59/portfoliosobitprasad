@@ -3,7 +3,7 @@ import {
   LinkedinIcon,
   MailIcon,
   TwitterIcon,
-} from "@/assets/icons/icons";
+} from "../assets/icons/icons";
 import Link from "next/link";
 import React from "react";
 
@@ -32,11 +32,11 @@ const links = [
 
 const Socials = () => {
   return (
-    <ul className="flex gap-4 text-sm font-light text-slate-300">
-      {links.map(({ name, href, icon }) => (
+    <ul className="flex gap-4 text-xs font-light text-slate-300">
+      {links.map(({ name, href, icon : Icon }) => (
         <li key={name}>
           <Link href={href} target="_blank">
-            {icon()}
+             <Icon />
           </Link>
         </li>
       ))}

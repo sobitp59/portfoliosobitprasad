@@ -1,0 +1,222 @@
+=== Web Vitals Log Start ===
+[2025-05-14T04:24:49.900Z] {"name":"FCP","value":748,"rating":"good","delta":748,"entries":[{"name":"first-contentful-paint","entryType":"paint","startTime":748,"duration":0}],"id":"v4-1747196689627-3143679456593","navigationType":"reload"}
+[2025-05-14T04:24:49.891Z] {"name":"TTFB","value":87.39999985694885,"rating":"good","delta":87.39999985694885,"entries":[{"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":764.0999999046326,"initiatorType":"navigation","deliveryType":"","nextHopProtocol":"http/1.1","renderBlockingStatus":"non-blocking","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":2.0999999046325684,"domainLookupStart":4.299999952316284,"domainLookupEnd":4.299999952316284,"connectStart":4.299999952316284,"secureConnectionStart":0,"connectEnd":5.200000047683716,"requestStart":5.200000047683716,"responseStart":87.39999985694885,"firstInterimResponseStart":0,"finalResponseHeadersStart":87.39999985694885,"responseEnd":99.5,"transferSize":16481,"encodedBodySize":16181,"decodedBodySize":71191,"responseStatus":200,"serverTiming":[],"unloadEventStart":90.39999985694885,"unloadEventEnd":90.39999985694885,"domInteractive":383.39999985694885,"domContentLoadedEventStart":383.39999985694885,"domContentLoadedEventEnd":384.5,"domComplete":763.2000000476837,"loadEventStart":764,"loadEventEnd":764.0999999046326,"type":"reload","redirectCount":0,"activationStart":0,"criticalCHRestart":0,"notRestoredReasons":null}],"id":"v4-1747196689627-7951857251810","navigationType":"reload"}
+[2025-05-14T04:24:52.880Z] {"name":"CLS","value":0,"rating":"good","delta":0,"entries":[],"id":"v4-1747196689639-2004288682946","navigationType":"reload"}
+[2025-05-14T04:24:52.897Z] {"name":"LCP","value":748,"rating":"good","delta":748,"entries":[{"name":"","entryType":"largest-contentful-paint","startTime":748,"duration":0,"size":26015,"renderTime":748,"loadTime":386.59999990463257,"id":"","url":"https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"}],"id":"v4-1747196689627-3810794781690","navigationType":"reload"}
+[2025-05-14T04:26:26.634Z] {"name":"INP","value":8,"rating":"good","delta":8,"entries":[{"name":"pointerdown","entryType":"first-input","startTime":96859.70000004768,"duration":8,"interactionId":4179,"processingStart":96864.09999990463,"processingEnd":96864.79999995232,"cancelable":true}],"id":"v4-1747196689627-4415563878596","navigationType":"reload"}
+[2025-05-14T04:27:06.777Z] {"name":"INP","value":48,"rating":"good","delta":40,"entries":[{"name":"keydown","entryType":"event","startTime":137688,"duration":48,"interactionId":4200,"processingStart":137688.70000004768,"processingEnd":137688.89999985695,"cancelable":true}],"id":"v4-1747196689627-4415563878596","navigationType":"reload"}
+
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:32:29.108Z
+  
+    Metric Name: TTFB
+    Value: 194.09999990463257ms (0.19s)
+    Start Time: undefinedms
+    ID: v4-1747197148702-5905915507397
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:32:29.117Z
+  
+    Metric Name: FCP
+    Value: 1120ms (1.12s)
+    Start Time: undefinedms
+    ID: v4-1747197148702-4235403384014
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:32:30.596Z
+  
+    Metric Name: FID
+    Value: 0.5ms (0.00s)
+    Start Time: undefinedms
+    ID: v4-1747197148702-4734980601387
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:32:30.607Z
+  
+    Metric Name: LCP
+    Value: 1120ms (1.12s)
+    Start Time: undefinedms
+    ID: v4-1747197148702-6723293112904
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:32:32.026Z
+  
+    Metric Name: INP
+    Value: 0ms (0.00s)
+    Start Time: undefinedms
+    ID: v4-1747197148702-5331811227749
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:32:32.035Z
+  
+    Metric Name: CLS
+    Value: 0ms (0.00s)
+    Start Time: undefinedms
+    ID: v4-1747197148726-6115888054614
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:33:00.885Z
+  
+    Metric Name: FCP
+    Value: 3911.5999999046326ms (3.91s)
+    Start Time: undefinedms
+    ID: v4-1747197180483-2622666980176
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:33:00.901Z
+  
+    Metric Name: TTFB
+    Value: 3038ms (3.04s)
+    Start Time: undefinedms
+    ID: v4-1747197180483-3883089664279
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:33:02.904Z
+  
+    Metric Name: CLS
+    Value: 0ms (0.00s)
+    Start Time: undefinedms
+    ID: v4-1747197180533-8830217446894
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:34:50.552Z
+  
+    Metric Name: TTFB
+    Value: 115.10000014305115ms (0.12s)
+    Start Time: undefinedms
+    Rating : good
+    ID: v4-1747197290380-5909573952515
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:36:22.486Z
+  
+    Metric Name: FCP
+    Value: 1664ms (1.66s)
+    Start Time: undefinedms
+    Rating : good
+    ID: v4-1747197382412-8034201478929
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:36:22.497Z
+  
+    Metric Name: TTFB
+    Value: 115.10000014305115ms (0.12s)
+    Start Time: undefinedms
+    Rating : good
+    ID: v4-1747197382412-6361888463608
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:38:35.435Z
+  
+    Metric Name: CLS
+    Value: 0ms (0.00s)
+    Start Time: undefinedms
+    Rating : good
+    ID: v4-1747197382414-2663528024105
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:38:35.446Z
+  
+    Metric Name: LCP
+    Value: 1664ms (1.66s)
+    Start Time: undefinedms
+    Rating : good
+    ID: v4-1747197382412-2293307633792
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:39:46.097Z
+  
+    Metric Name: TTFB
+    Value: 96.89999985694885ms (0.10s)
+    Rating: good
+    Delta: 96.89999985694885ms
+    Entries:
+    
+      Entry Name: http://localhost:3000/
+      Entry Type: navigation
+      Start Time: 0ms
+      Duration: 941.0999999046326ms
+      Interaction ID: N/A
+      Processing Start: N/Ams
+      Processing End: N/Ams
+      Cancelable: N/A
+    
+    ID: v4-1747197585858-2835785689140
+    Navigation Type: reload
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:40:30.815Z
+  
+    Metric Name: FID
+    Value: 1.7999999523162842ms (0.00s)
+    Rating: good
+    Delta: 1.7999999523162842ms
+    Entries:
+    
+      Entry Name: pointerdown
+      Entry Type: first-input
+      Start Time: 45956.5ms
+      Duration: 8ms
+      Interaction ID: 1715
+      Processing Start: 45958.299999952316ms
+      Processing End: 45958.59999990463ms
+      Cancelable: true
+    
+    ID: v4-1747197585856-4630231543986
+    Navigation Type: reload
+  
+  ============================
+  
+  === Web Vitals Log Entry ===
+  Timestamp: 2025-05-14T04:40:30.825Z
+  
+    Metric Name: INP
+    Value: 8ms (0.01s)
+    Rating: good
+    Delta: 8ms
+    Entries:
+    
+      Entry Name: pointerdown
+      Entry Type: first-input
+      Start Time: 45956.5ms
+      Duration: 8ms
+      Interaction ID: 1715
+      Processing Start: 45958.299999952316ms
+      Processing End: 45958.59999990463ms
+      Cancelable: true
+    
+    ID: v4-1747197585857-2442332502245
+    Navigation Type: reload
+  
+  ============================
+  
