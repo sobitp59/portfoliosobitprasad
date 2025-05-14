@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderNavbar from "@/components/header-nav";
+import HeaderNavbar from "../../components/header-nav";
 
 const AboutPage = () => {
   return (

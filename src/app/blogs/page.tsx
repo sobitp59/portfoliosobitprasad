@@ -1,5 +1,6 @@
-import HeaderNavbar from "@/components/header-nav";
+
 import React from "react";
+import HeaderNavbar from "../../components/header-nav";
 
 const BlogPage = () => {
   return (
