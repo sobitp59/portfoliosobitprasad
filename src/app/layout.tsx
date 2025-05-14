@@ -4,11 +4,6 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 
 
-// const fraunces = Fraunces({
-//   variable: "--font-fraunces",
-//   subsets: ["latin"],
-// });
-
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -21,6 +16,22 @@ export const metadata: Metadata = {
   title: "Sobit Prasad",
   description:
     "Sobit Prasad is a software engineer and a tech enthusiast. He loves to write about software development, technology, and life. He is passionate about building products that make a difference. He is currently working as a full-stack developer at Woxsen University.",
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon_dark.svg",
+      media: "(prefers-color-scheme: light)", 
+    },
+    {
+      rel: "icon",
+      url: "/favicon_light.svg",
+      media: "(prefers-color-scheme: dark)",
+    },
+    {
+      rel: "icon",
+      url: "/favicon.ico",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -30,10 +41,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       {/* <head/> */}
       <body className={`${geist.variable} antialiased`}>
-        {/* <LoadingScreen /> */}
-        {children}
-        <Footer />
+        <main className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
+         {children}
+        </main>
+
+        <Footer/>
       </body>
     </html>
   );

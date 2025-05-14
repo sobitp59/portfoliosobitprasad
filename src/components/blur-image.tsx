@@ -34,3 +34,4 @@ export default function BlurImage({src, alt, width, height, blurDataURL, classNa
   
 
 }
+  
