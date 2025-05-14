@@ -1,4 +1,3 @@
-import { DownloadLoadIcon } from "../assets/icons/icons";
 import BlurImage from "../components/blur-image";
 import DownloadResume from "../components/download-resume";
 import Navbar from "../components/navbar";
