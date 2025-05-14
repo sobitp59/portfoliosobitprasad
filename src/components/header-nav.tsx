@@ -1,6 +1,6 @@
-import LeftArrowIcon from "@/assets/icons/icons";
 import Link from "next/link";
 import React from "react";
+import LeftArrowIcon from "../assets/icons/icons";
 
 const HeaderNavbar = ({ title }: { title: string }) => {
   return (
