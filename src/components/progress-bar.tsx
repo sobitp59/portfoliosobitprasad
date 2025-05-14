@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 
 export default function ScrollProgressBar() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
+
     const updateScrollProgress = () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -14,12 +17,16 @@ export default function ScrollProgressBar() {
     };
 
     window.addEventListener("scroll", updateScrollProgress);
+    updateScrollProgress(); // Trigger initial value
+
     return () => window.removeEventListener("scroll", updateScrollProgress);
   }, []);
 
+  if (!hasMounted) return null; // Avoid rendering on server
+
   return (
     <div
-      className="fixed top-0 left-0 h-[2px] bg-white z-50 transition-all duration-100 ease-in-out"
+      className="fixed top-0 left-0 h-[3px] bg-white z-50 transition-all duration-100 ease-in-out"
       role="progressbar"
       aria-valuenow={scrollProgress}
       aria-valuemin={0}
