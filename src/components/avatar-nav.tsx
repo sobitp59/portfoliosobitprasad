@@ -46,6 +46,7 @@ export default function AvatarNav() {
     const handleMove = (e: MouseEvent | TouchEvent) => {
       if (!dragMode || !nodeRef.current) return;
 
+      e.stopPropagation();
       e.preventDefault();
 
 
