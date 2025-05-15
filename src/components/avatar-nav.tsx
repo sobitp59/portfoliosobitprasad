@@ -126,7 +126,7 @@ export default function AvatarNav() {
           width={300}
           height={300}
           blurDataURL="/profile2.jpeg"
-          className="rounded-lg w-12 h-12 object-cover"
+          className="rounded-lg w-12 h-12 object-cover z-30"
         />
 
         {showControles && (
