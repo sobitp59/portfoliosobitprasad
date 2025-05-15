@@ -46,6 +46,9 @@ export default function AvatarNav() {
     const handleMove = (e: MouseEvent | TouchEvent) => {
       if (!dragMode || !nodeRef.current) return;
 
+      e.preventDefault();
+
+
       const { x: clientX, y: clientY } = getClientPosition(e);
       const bounds = nodeRef.current.getBoundingClientRect();
 
@@ -77,7 +80,7 @@ export default function AvatarNav() {
     return () => {
       window.removeEventListener("mousemove", handleMove);
       window.removeEventListener("mouseup", stopDrag);
-      window.removeEventListener("touchmove", handleMove);
+      window.removeEventListener("touchmove", handleMove, false);
       window.removeEventListener("touchend", stopDrag);
     };
   }, [dragMode, startMouse, startPos]);
@@ -97,6 +100,8 @@ export default function AvatarNav() {
           }
         }}
         onTouchStart={(e) => {
+          e.stopPropagation();
+          e.preventDefault();
           const touch = e.touches[0];
           if (touch && !dragMode) {
             setDragMode("move");
@@ -129,6 +134,12 @@ export default function AvatarNav() {
             <div
               onMouseDown={(e) => {
                 e.stopPropagation();
+                e.preventDefault();
+                setDragMode("rotate");
+              }}
+              onTouchStart={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
                 setDragMode("rotate");
               }}
               onMouseLeave={() => setShowControls(false)}
@@ -141,6 +152,12 @@ export default function AvatarNav() {
             <div
               onMouseDown={(e) => {
                 e.stopPropagation();
+                e.preventDefault();
+                setDragMode("scale");
+              }}
+              onTouchStart={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
                 setDragMode("scale");
               }}
               onMouseLeave={() => setShowControls(false)}
@@ -150,6 +167,7 @@ export default function AvatarNav() {
             </div>
           </>
         )}
+
       </div>
 
       <section className="flex flex-col items-start ml-20">
