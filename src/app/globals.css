@@ -5,7 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-geist-sans: 'Geist', sans-serif;
+  --font-bricolage-sans: "Bricolage Grotesque", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,5 +18,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist-sans)
+  font-family: var(--font-bricolage-sans)
 }

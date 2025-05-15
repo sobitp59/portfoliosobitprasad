@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { Footer } from "../components/footer";
@@ -7,8 +7,8 @@ import ScrollProgressBar from "../components/progress-bar";
 import AvatarNav from "../components/avatar-nav";
 
 
-const geist = Geist({
-  variable: "--font-geist-sans",
+const geist = Bricolage_Grotesque({
+  variable: "--font-bricolage-sans",
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
