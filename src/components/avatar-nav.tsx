@@ -6,13 +6,28 @@ import { MoveDiagonal2, Redo } from "lucide-react";
 
 export default function AvatarNav() {
   const nodeRef = useRef<HTMLDivElement>(null);
-  const [showControles, setShowControls] = useState(false);
+  const [showControles, setShowControls] = useState(true);
   const [position, setPosition] = useState({ x: 50, y: 18 });
-  const [rotate, setRotate] = useState(6);
+  const [rotate, setRotate] = useState(180);
   const [scale, setScale] = useState(1);
   const [dragMode, setDragMode] = useState<"rotate" | "scale" | "move" | null>(null);
   const [startMouse, setStartMouse] = useState<{ x: number; y: number } | null>(null);
   const [startPos, setStartPos] = useState<{ x: number; y: number } | null>(null);
+
+  const getClientPosition = (e: MouseEvent | TouchEvent) => {
+    if ("touches" in e) {
+      return {
+        x: e.touches[0]?.clientX ?? 0,
+        y: e.touches[0]?.clientY ?? 0,
+      };
+    } else {
+      return {
+        x: e.clientX,
+        y: e.clientY,
+      };
+    }
+  };
+
 
   const getAngle = (center: DOMRect, mouseX: number, mouseY: number) => {
     const dx = mouseX - (center.left + center.width / 2);
@@ -31,8 +46,7 @@ export default function AvatarNav() {
     const handleMove = (e: MouseEvent | TouchEvent) => {
       if (!dragMode || !nodeRef.current) return;
 
-      const clientX = (e as MouseEvent).clientX ?? (e as TouchEvent).touches?.[0]?.clientX;
-      const clientY = (e as MouseEvent).clientY ?? (e as TouchEvent).touches?.[0]?.clientY;
+      const { x: clientX, y: clientY } = getClientPosition(e);
       const bounds = nodeRef.current.getBoundingClientRect();
 
       if (dragMode === "rotate") {
@@ -47,6 +61,7 @@ export default function AvatarNav() {
         setPosition({ x: startPos.x + dx, y: startPos.y + dy });
       }
     };
+
 
     const stopDrag = () => {
       setDragMode(null);
@@ -81,6 +96,14 @@ export default function AvatarNav() {
             setStartPos({ ...position });
           }
         }}
+        onTouchStart={(e) => {
+          const touch = e.touches[0];
+          if (touch && !dragMode) {
+            setDragMode("move");
+            setStartMouse({ x: touch.clientX, y: touch.clientY });
+            setStartPos({ ...position });
+          }
+        }}
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
@@ -89,10 +112,7 @@ export default function AvatarNav() {
           transformOrigin: "center center",
         }}
 
-      // style={{
-      //   transform: `translate(${position.x}px, ${position.y}px) rotate(${rotate}deg) scale(${scale})`,
-      //   transformOrigin: "center center",
-      // }}
+
       >
         <BlurImage
           src="/profile2.jpeg"
