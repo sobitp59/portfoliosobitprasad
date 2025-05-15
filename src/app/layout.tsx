@@ -4,7 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { Footer } from "../components/footer";
 import ScrollProgressBar from "../components/progress-bar";
-import BlurImage from "../components/blur-image";
+import AvatarNav from "../components/avatar-nav";
 
 
 const geist = Geist({
@@ -48,21 +48,7 @@ export default function RootLayout({
       <body className={`${geist.variable} antialiased`}>
         <main className="min-h-screen">
           <ScrollProgressBar />
-
-          <section className="w-full flex justify-center items-center gap-5 sticky top-0 py-4 z-10 md:hidden bg-slate-900/5 backdrop-blur-lg ">
-            <BlurImage
-              src={"/profile2.jpeg"}
-              alt="Sobit Prasad"
-              width={300}
-              height={300}
-              blurDataURL="/profile2.jpeg"
-              className="rounded-lg w-12 h-12 md:hidden object-cover rotate-6"
-            />
-            <section className="flex flex-col items-start">
-              <h1 className="text-2xl font-bold text-slate-300">Sobit Prasad</h1>
-              <p className="text-xs text-slate-400">Software Developer <a href="https://woxsen.edu.in/" rel="noopener noreferrer" target="_blank">@Woxsen University</a></p>
-            </section>
-          </section>
+          <AvatarNav />
 
           <div className="flex flex-col items-center justify-center gap-8 p-4 md:p-8 lg:p-20">
             {children}
